@@ -18,8 +18,8 @@ Database: Supabase (PostgreSQL)
 
 Deployment: Docker support coming soon
 
-Project Structure
-Plaintext
+## Project Structure
+'''plaintext
 prompt-recommender/
 ├── app/
 │   ├── main.py
@@ -38,9 +38,9 @@ git clone <your-repo-url>
 cd prompt-recommender
 python -m venv venv
 
-# Windows
+## Windows
 venv\Scripts\activate
-# Mac/Linux
+## Mac/Linux
 source venv/bin/activate
 
 2. Install Dependencies
@@ -64,7 +64,7 @@ from app.recommender import PromptRecommender
 
 rec = PromptRecommender()
 
-# Fetch real prompts from Supabase or provide a list
+## Fetch real prompts from Supabase or provide a list
 prompts = ["A cyberpunk girl...", "Cute fox wizard..."]  
 
 rec.build_index(prompts)
