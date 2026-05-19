@@ -30,6 +30,7 @@ prompt-recommender/
 ├── .env.example
 ├── requirements.txt
 └── README.md
+```
 
 # Setup Instructions
 1. Clone & Setup Environment
