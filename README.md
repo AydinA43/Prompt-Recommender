@@ -19,7 +19,7 @@ Database: Supabase (PostgreSQL)
 Deployment: Docker support coming soon
 
 ## Project Structure
-'''plaintext
+```plaintext
 prompt-recommender/
 ├── app/
 │   ├── main.py
@@ -38,10 +38,11 @@ git clone <your-repo-url>
 cd prompt-recommender
 python -m venv venv
 
-## Windows
+### Windows
 venv\Scripts\activate
-## Mac/Linux
+### Mac/Linux
 source venv/bin/activate
+
 
 2. Install Dependencies
 Bash
@@ -64,7 +65,7 @@ from app.recommender import PromptRecommender
 
 rec = PromptRecommender()
 
-## Fetch real prompts from Supabase or provide a list
+#### Fetch real prompts from Supabase or provide a list
 prompts = ["A cyberpunk girl...", "Cute fox wizard..."]  
 
 rec.build_index(prompts)
@@ -74,7 +75,7 @@ Bash
 uvicorn app.main:app --reload
 View the interactive Swagger documentation at: http://127.0.0.1:8000/docs
 
-API Endpoints:
+## API Endpoints:
 
 GET / → Health check
 GET /recommend/{user_id} → Retrieve personalized prompt recommendations
