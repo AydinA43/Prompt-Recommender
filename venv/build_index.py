@@ -6,7 +6,7 @@ def main():
     
     rec = PromptRecommender()
     
-    # Fetch ALL unique prompts from your database
+    # Fetch ALL unique prompts from database
     response = rec.supabase.table("user_generations") \
         .select("prompt") \
         .execute()

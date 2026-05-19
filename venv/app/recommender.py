@@ -32,7 +32,6 @@ class PromptRecommender:
         self.index = faiss.IndexFlatIP(dimension)
         self.index.add(embeddings)
         
-        # Save index
         faiss.write_index(self.index, "index/prompt_index.faiss")
         with open("index/prompt_list.pkl", "wb") as f:
             pickle.dump(self.prompt_list, f)
@@ -49,7 +48,6 @@ class PromptRecommender:
         df = self.fetch_user_history(user_id)
         
         if len(df) == 0:
-            # Cold start
             return [{"prompt": p, "similarity": 0.8, "reason": "Popular prompt"} 
                    for p in self.prompt_list[:n]]
         
